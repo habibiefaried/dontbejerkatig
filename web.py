@@ -30,5 +30,4 @@ def mainPage():
 		return render_template('index.html')
 
 if __name__ == '__main__':
-	app.secret_key = '1239dasHAUHS123&#L!'
 	app.run()
