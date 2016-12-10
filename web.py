@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session
 import os
 import requests
 import json
@@ -23,11 +23,12 @@ def mainPage():
 		session['access_token'] = data['access_token']
 		session['full_name'] = data['user']['full_name']
 		session['username'] = data['user']['username']
-		
-		return r.text
+
+		return render_template('main.html',data=session)
 
 	else:
 		return render_template('index.html')
 
 if __name__ == '__main__':
+	app.secret_key = '1239dasHAUHS123&#L!'
 	app.run()
