@@ -3,5 +3,11 @@
 	<body>
 		<h1>Selamat Datang, {{ data['full_name'] }}!</h1>
 		<p>Kamu sudah berhasil login</p>
+		<hr>
+		<p>Pilih 2 mode aplikasi:</p>
+		<ul>
+			<li><a href="/dashboard/bad_friend_detector">Mengecek siapa saja yang sudah kamu follow tapi meraka tidak follow back kamu</a></li>
+			<li><a href="/dashboard/bad_self_detector">Mengecek siapa saja yang sudah follow kamu tapi kamu belum follow back mereka</a></li>
+		</ul>
 	</body>
 </html>
